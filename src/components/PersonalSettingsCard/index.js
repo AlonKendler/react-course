@@ -6,6 +6,9 @@ import PersonalForm from "./PersonalForm";
 // import NotificationList from "./NotificationList";
 // import NotificationCardAction from "./NotificationCardAction";
 
+// TODO: don't use a "global" stylesheet
+// read about CSS-IN-JS
+// apply CSS-IN-JS
 function PersonalSettingsCard() {
   return (
     <div className="settingsCard">

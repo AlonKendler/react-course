@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
+import messages from "./messages";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -24,6 +25,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function PersonalForm() {
   const classes = useStyles();
+  //TODO read about use state and hooks before you write this code
   const [values, setValues] = React.useState({
     name: "אלון קנדלר",
     phone: "0525848830",
@@ -40,6 +42,13 @@ export default function PersonalForm() {
 
   //   let streetClasses = ["textFieldStreet"];
 
+  //TODO add material ui GRID
+  // for desktop - the form should be divided as in the picture
+  // for mobile - one field per "row"
+
+  // TODO add the mising "reset password" text
+  // TODO learn about material ui icons and how to add them
+  // TODO if you dont have a good reason - dont add unnessesary attirubutes like id
   return (
     <form className={classes.container} noValidate autoComplete="off">
       <TextField
@@ -92,7 +101,7 @@ export default function PersonalForm() {
       />
       <TextField
         id="standard-name"
-        label="עיר"
+        label={messages.city}
         className="textFieldStreet"
         value={values.city}
         onChange={handleChange("city")}
