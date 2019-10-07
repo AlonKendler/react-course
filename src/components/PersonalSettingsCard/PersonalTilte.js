@@ -1,15 +1,27 @@
 import React from "react";
 import messages from "./messages";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 
-//TODO : instead of writing plain text in the components
-// create messages.js file for each component and set it's messages there.
+const useStyles = makeStyles(theme => ({
+  container: {
+    padding: theme.spacing(2)
+  },
+  header: {
+    fontWeight: "bold"
+  }
+}));
 
-//TODO do not use divs for text components, use TYPOGRAPHY
 function PersonalTitle() {
+  const classes = useStyles();
   return (
-    <div className="titleHeader">
-      <div className="titleBold">{messages.personalSettingsTitle}</div>
-      <div className="titleReg">{messages.personalSettingsDescription}</div>
+    <div className={classes.container}>
+      <Typography className={classes.header} variant="h5">
+        {messages.personalSettingsTitle}
+      </Typography>
+      <Typography variant="subtitle1">
+        {messages.personalSettingsDescription}
+      </Typography>
     </div>
   );
 }

@@ -6,10 +6,6 @@ import Grid from "@material-ui/core/Grid";
 import PasswordText from "./PasswordText";
 
 const useStyles = makeStyles(theme => ({
-  container: {
-    boxShadow: "0 0px 2px 0 rgba(0, 0, 0, 0.35)",
-    borderRadius: "3px"
-  },
   textField: {
     width: "100%"
   },
@@ -39,12 +35,8 @@ function PersonalForm() {
     setValues({ ...values, [name]: event.target.value });
   };
 
-  //TODO add material ui GRID
-  // for desktop - the form should be divided as in the picture
-  // for mobile - one field per "row"
-
   return (
-    <form className={classes.container} noValidate autoComplete="off">
+    <form noValidate autoComplete="off">
       <Grid container>
         <Grid item className={classes.textFieldWrap} xs={12} sm={6}>
           <TextField
@@ -81,7 +73,7 @@ function PersonalForm() {
             autoComplete="current-password"
             margin="normal"
           />
-          <PasswordText></PasswordText>
+          <PasswordText />
         </Grid>
         <Grid item className={classes.textFieldWrap} xs={6} sm={4}>
           <TextField
