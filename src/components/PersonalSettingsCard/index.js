@@ -13,8 +13,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 // TODO use a generic title component for both settigns card
-// TODO use generic actions compoenrt for both settigns card
-// TODO use mui Card component and not plain css
+// TODO use generic actions component for both settigns card
 // TODO: don't use a "global" stylesheet
 // read about CSS-IN-JS
 // apply CSS-IN-JS
