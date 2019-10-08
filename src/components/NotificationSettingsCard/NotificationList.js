@@ -1,15 +1,15 @@
 import React from "react";
 import NotificationItem from "./NotificationItem";
 import notificationData from "./notificationData";
+import Divider from "@material-ui/core/Divider";
 
 function NotificationList() {
   const list = notificationData.map(notification => {
     return (
-      <NotificationItem
-        key={notification.id}
-        head={notification.head}
-        text={notification.text}
-      />
+      <div key={notification.id}>
+        <NotificationItem head={notification.head} text={notification.text} />
+        <Divider />
+      </div>
     );
   });
 
