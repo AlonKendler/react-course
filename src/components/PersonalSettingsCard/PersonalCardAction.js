@@ -11,7 +11,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "rgb(47, 114, 133)"
   }
 }));
-// TODO: use mui card-actions to make reusable carwiz component
 function PersonalCardAction() {
   const classes = useStyles();
   return (

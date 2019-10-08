@@ -1,10 +1,11 @@
 import React from "react";
 import PersonalTitle from "./PersonalTilte";
-import PersonalCardAction from "./PersonalCardAction";
+// import PersonalCardAction from "./PersonalCardAction";
 import PersonalForm from "./PersonalForm";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
+import CarwizCardAction from "../NotificationSettingsCard/CarwizCardAction";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -14,10 +15,7 @@ const useStyles = makeStyles(theme => ({
 
 // TODO use a generic title component for both settigns card
 // TODO use generic actions component for both settigns card
-// TODO: don't use a "global" stylesheet
-// read about CSS-IN-JS
-// apply CSS-IN-JS
-function PersonalSettingsCard() {
+function PersonalSettingsCard(props) {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
@@ -25,7 +23,7 @@ function PersonalSettingsCard() {
       <Divider />
       <PersonalForm />
       <Divider />
-      <PersonalCardAction />
+      <CarwizCardAction data={props.data} />
     </Card>
   );
 }

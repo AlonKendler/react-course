@@ -1,7 +1,7 @@
 import React from "react";
 import NotificationTitle from "./NotificationTitle";
 import NotificationList from "./NotificationList";
-import NotificationCardAction from "./NotificationCardAction";
+import NotificationCardAction from "./CarwizCardAction";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
@@ -11,10 +11,8 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(2)
   }
 }));
-// TODO use a generic title component for both settigns card
-// TODO use generic actions compoenrt for both settigns card
-// TODO use mui Card component and not plain css
-function NotificationSettingsCard() {
+
+function NotificationSettingsCard(props) {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
@@ -22,7 +20,7 @@ function NotificationSettingsCard() {
       <Divider />
       <NotificationList />
       <Divider />
-      <NotificationCardAction />
+      <NotificationCardAction data={props.data} />
     </Card>
   );
 }

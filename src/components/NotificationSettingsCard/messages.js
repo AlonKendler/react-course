@@ -1,5 +1,5 @@
 export default {
   name: "שם",
   abort: "בטל",
-  updateInfo: "עדכן פרטים"
+  updateInfo: "עדכן הודעות"
 };
