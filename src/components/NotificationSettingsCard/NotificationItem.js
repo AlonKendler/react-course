@@ -14,6 +14,9 @@ const useStyles = makeStyles(theme => ({
   },
   header: {
     fontWeight: "bold"
+  },
+  helpText: {
+    color: "rgb(138,138,138)"
   }
 }));
 function NotificationItem(props) {
@@ -27,10 +30,10 @@ function NotificationItem(props) {
       alignItems="center"
     >
       <Grid item xs={11}>
-        <Typography variant="subtitle1" className={classes.header}>
-          {props.head}
+        <Typography variant="h6">{props.head}</Typography>
+        <Typography className={classes.helpText} variant="subtitle2">
+          {props.text}
         </Typography>
-        <Typography variant="subtitle2">{props.text}</Typography>
       </Grid>
       <Grid item className={classes.switch} xs={1}>
         <NotificationSwitch />

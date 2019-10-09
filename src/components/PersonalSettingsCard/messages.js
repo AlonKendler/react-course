@@ -7,11 +7,12 @@ export default {
   street: "רחוב",
   houseNumber: "מספר",
   difPass: "רוצים סיסמה אחרת?",
-  personalSettingsTitle: "הגדרות אישיות",
-  personalSettingsDescription:
-    "ניתן לעדכן את הגדרות החשבון שלך. שים לב, עדכון הכתובת שלך יעדכן את ההדפות החיפוש שלך באופן אוטומטי",
-  // here comes the text messages for the CarwizActionCard
+  // here comes the text messages for the CarwizCardAction
   updateInfo: "עדכן פרטים",
   abort: "בטל הגדרות",
-  optionalText: "אני לא רוצה לקבל שום הודעה"
+  optionalText: "",
+  // here comes the text messages for the CarwizCardHeader
+  CardHeaderTitle: "הגדרות אישיות",
+  CardHeaderDescription:
+    "ניתן לעדכן את הגדרות החשבון שלך. שים לב, עדכון הכתובת שלך יעדכן את ההדפות החיפוש שלך באופן אוטומטי"
 };

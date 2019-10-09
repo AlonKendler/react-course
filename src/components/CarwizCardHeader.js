@@ -1,5 +1,4 @@
 import React from "react";
-import messages from "./messages";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 
@@ -9,21 +8,24 @@ const useStyles = makeStyles(theme => ({
   },
   header: {
     fontWeight: "bold"
+  },
+  helpText: {
+    color: "rgb(138,138,138)"
   }
 }));
 
-function PersonalTitle() {
+function CarwizCardHeader(props) {
   const classes = useStyles();
   return (
     <div className={classes.container}>
       <Typography className={classes.header} variant="h5">
-        {messages.personalSettingsTitle}
+        {props.data.CardHeaderTitle}
       </Typography>
-      <Typography variant="subtitle1">
-        {messages.personalSettingsDescription}
+      <Typography className={classes.helpText} variant="subtitle1">
+        {props.data.CardHeaderDescription}
       </Typography>
     </div>
   );
 }
 
-export default PersonalTitle;
+export default CarwizCardHeader;

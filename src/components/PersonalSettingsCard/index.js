@@ -1,11 +1,10 @@
 import React from "react";
-import PersonalTitle from "./PersonalTilte";
-// import PersonalCardAction from "./PersonalCardAction";
 import PersonalForm from "./PersonalForm";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
-import CarwizCardAction from "../NotificationSettingsCard/CarwizCardAction";
+import CarwizCardAction from "../CarwizCardAction";
+import CarwizCardHeader from "../CarwizCardHeader";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -19,7 +18,7 @@ function PersonalSettingsCard(props) {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
-      <PersonalTitle />
+      <CarwizCardHeader data={props.data} />
       <Divider />
       <PersonalForm />
       <Divider />

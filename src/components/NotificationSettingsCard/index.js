@@ -1,10 +1,10 @@
 import React from "react";
-import NotificationTitle from "./NotificationTitle";
 import NotificationList from "./NotificationList";
-import NotificationCardAction from "./CarwizCardAction";
+import NotificationCardAction from "../CarwizCardAction";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
+import CarwizCardHeader from "../CarwizCardHeader";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -16,7 +16,7 @@ function NotificationSettingsCard(props) {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
-      <NotificationTitle />
+      <CarwizCardHeader data={props.data} />
       <Divider />
       <NotificationList />
       <Divider />
