@@ -9,7 +9,7 @@ export default {
   difPass: "רוצים סיסמה אחרת?",
   // here comes the text messages for the CarwizCardAction
   updateInfo: "עדכן פרטים",
-  abort: "בטל הגדרות",
+  abort: "בטל",
   optionalText: "",
   // here comes the text messages for the CarwizCardHeader
   CardHeaderTitle: "הגדרות אישיות",

@@ -12,8 +12,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-// TODO use a generic title component for both settigns card
-// TODO use generic actions component for both settigns card
 function PersonalSettingsCard(props) {
   const classes = useStyles();
   return (
