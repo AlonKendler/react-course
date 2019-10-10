@@ -1,8 +1,8 @@
 import React from "react";
-import messages from "./messages";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
+import messages from "./messages";
 import PasswordText from "./PasswordText";
 
 const useStyles = makeStyles(theme => ({
@@ -18,9 +18,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function PersonalForm() {
+const PersonalForm = () => {
   const classes = useStyles();
-  //TODO read about use state and hooks before you write this code
+  // TODO read about use state and hooks before you write this code
   const [values, setValues] = React.useState({
     name: "אלון קנדלר",
     phone: "0525848830",
@@ -38,7 +38,7 @@ function PersonalForm() {
   return (
     <form noValidate autoComplete="off">
       <Grid container>
-        <Grid item className={classes.textFieldWrap} xs={12} sm={6}>
+        <Grid item className={classes.textFieldWrap} xs={12} md={6}>
           <TextField
             label={messages.name}
             className={classes.textField}
@@ -47,7 +47,7 @@ function PersonalForm() {
             margin="normal"
           />
         </Grid>
-        <Grid item className={classes.textFieldWrap} xs={12} sm={6}>
+        <Grid item className={classes.textFieldWrap} xs={12} md={6}>
           <TextField
             label={messages.phone}
             className={classes.textField}
@@ -56,7 +56,7 @@ function PersonalForm() {
             margin="normal"
           />
         </Grid>
-        <Grid item className={classes.textFieldWrap} xs={12} sm={6}>
+        <Grid item className={classes.textFieldWrap} xs={12} md={6}>
           <TextField
             label={messages.email}
             className={classes.textField}
@@ -65,7 +65,7 @@ function PersonalForm() {
             margin="normal"
           />
         </Grid>
-        <Grid item className={classes.textFieldWrap} xs={12} sm={6}>
+        <Grid item className={classes.textFieldWrap} xs={12} md={6}>
           <TextField
             label={messages.password}
             className={classes.textField}
@@ -75,7 +75,7 @@ function PersonalForm() {
           />
           <PasswordText />
         </Grid>
-        <Grid item className={classes.textFieldWrap} xs={6} sm={4}>
+        <Grid item className={classes.textFieldWrap} xs={6} md={4}>
           <TextField
             label={messages.street}
             className={classes.textField}
@@ -84,7 +84,7 @@ function PersonalForm() {
             margin="normal"
           />
         </Grid>
-        <Grid item className={classes.textFieldWrap} xs={6} sm={4}>
+        <Grid item className={classes.textFieldWrap} xs={6} md={4}>
           <TextField
             label={messages.houseNumber}
             className={classes.textField}
@@ -93,7 +93,7 @@ function PersonalForm() {
             margin="normal"
           />
         </Grid>
-        <Grid item className={classes.textFieldWrap} xs={12} sm={4}>
+        <Grid item className={classes.textFieldWrap} xs={12} md={4}>
           <TextField
             label={messages.city}
             className={classes.textField}
@@ -105,6 +105,6 @@ function PersonalForm() {
       </Grid>
     </form>
   );
-}
+};
 
 export default PersonalForm;

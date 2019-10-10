@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -14,18 +15,23 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function CarwizCardHeader(props) {
+const SettingsHeader = ({ title, description }) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
       <Typography className={classes.header} variant="h5">
-        {props.data.CardHeaderTitle}
+        {title}
       </Typography>
       <Typography className={classes.helpText} variant="subtitle1">
-        {props.data.CardHeaderDescription}
+        {description}
       </Typography>
     </div>
   );
-}
+};
 
-export default CarwizCardHeader;
+SettingsHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string
+};
+
+export default SettingsHeader;

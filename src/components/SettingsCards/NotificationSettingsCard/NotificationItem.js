@@ -1,8 +1,9 @@
 import React from "react";
-import NotificationSwitch from "./NotificationSwitch";
+import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import NotificationSwitch from "./NotificationSwitch";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -19,7 +20,11 @@ const useStyles = makeStyles(theme => ({
     color: "rgb(138,138,138)"
   }
 }));
-function NotificationItem(props) {
+
+// TODO: do not use props object, use destructuring
+// TODO: learn about prop-types and add them to all of your components
+
+const NotificationItem = ({ title, text }) => {
   const classes = useStyles();
   return (
     <Grid
@@ -30,9 +35,9 @@ function NotificationItem(props) {
       alignItems="center"
     >
       <Grid item xs={11}>
-        <Typography variant="h6">{props.head}</Typography>
+        <Typography variant="h6">{title}</Typography>
         <Typography className={classes.helpText} variant="subtitle2">
-          {props.text}
+          {text}
         </Typography>
       </Grid>
       <Grid item className={classes.switch} xs={1}>
@@ -40,6 +45,11 @@ function NotificationItem(props) {
       </Grid>
     </Grid>
   );
-}
+};
+
+NotificationItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+};
 
 export default NotificationItem;

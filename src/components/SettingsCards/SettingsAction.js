@@ -1,9 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import CardActions from "@material-ui/core/CardActions";
 import Fab from "@material-ui/core/Fab";
 import Button from "@material-ui/core/Button";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   color: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(1)
   }
 }));
-function CarwizCardAction(props) {
+const SettingsAction = ({ updateInfo, abort, optionalText }) => {
   const classes = useStyles();
   return (
     <Grid
@@ -25,12 +25,11 @@ function CarwizCardAction(props) {
       justify="space-between"
       alignItems="center"
     >
-      {/* <CardActions> */}
       <Grid item xs={5}>
-        <Button className={classes.icon}>{props.data.optionalText}</Button>
+        <Button className={classes.icon}>{optionalText}</Button>
       </Grid>
       <Grid item>
-        <Button>{props.data.abort}</Button>
+        <Button>{abort}</Button>
         <Fab
           className={classes.color}
           variant="extended"
@@ -38,12 +37,21 @@ function CarwizCardAction(props) {
           color="primary"
           aria-label="add"
         >
-          {props.data.updateInfo}
+          {updateInfo}
         </Fab>
       </Grid>
-      {/* </CardActions> */}
     </Grid>
   );
-}
+};
 
-export default CarwizCardAction;
+SettingsAction.propTypes = {
+  updateInfo: PropTypes.string.isRequired,
+  abort: PropTypes.string.isRequired,
+  optionalText: PropTypes.string
+};
+
+SettingsAction.defaultProps = {
+  optionalText: ""
+};
+
+export default SettingsAction;

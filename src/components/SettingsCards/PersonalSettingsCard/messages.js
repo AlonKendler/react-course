@@ -12,7 +12,7 @@ export default {
   abort: "בטל",
   optionalText: "",
   // here comes the text messages for the CarwizCardHeader
-  CardHeaderTitle: "הגדרות אישיות",
-  CardHeaderDescription:
+  cardHeaderTitle: "הגדרות אישיות",
+  cardHeaderDescription:
     "ניתן לעדכן את הגדרות החשבון שלך. שים לב, עדכון הכתובת שלך יעדכן את ההדפות החיפוש שלך באופן אוטומטי"
 };
