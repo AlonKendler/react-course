@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
 
 const NotificationSettingsCard = () => {
   const classes = useStyles();
+
   return (
     <Card className={classes.card}>
       <SettingsHeader

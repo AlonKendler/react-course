@@ -6,8 +6,8 @@ import PersonalSettingsCard from "./components/SettingsCards/PersonalSettingsCar
 // TODO: do not use <div> if there is no need
 // TODO: create a SettingsPage container that will contain all of the component's logic
 
-// TODO: it switches off all of the notification
 // TODO: add functionallity that when you press "אני לא רוצה לקבל שום הודעות"
+// TODO: it switches off all of the notification
 
 // TODO: make components able to get and past data from/to server.
 // TODO: crate data object with settings and pass them to the components

@@ -34,4 +34,8 @@ SettingsHeader.propTypes = {
   description: PropTypes.string
 };
 
+SettingsHeader.defaultProps = {
+  description: ""
+};
+
 export default SettingsHeader;
