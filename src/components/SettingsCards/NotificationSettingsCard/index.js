@@ -2,6 +2,7 @@ import React from "react";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
+import PropTypes from "prop-types";
 import NotificationList from "./NotificationList";
 import SettingsAction from "../SettingsAction";
 import SettingsHeader from "../SettingsHeader";
@@ -13,7 +14,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const NotificationSettingsCard = testFunc => {
+const NotificationSettingsCard = ({
+  data,
+  handleNotificationChange,
+  toggleOffAllNotifications
+}) => {
   const classes = useStyles();
 
   return (
@@ -23,16 +28,23 @@ const NotificationSettingsCard = testFunc => {
         description={messages.cardHeaderDescription}
       />
       <Divider />
-      <NotificationList />
+      <NotificationList
+        data={data}
+        handleNotificationChange={handleNotificationChange}
+      />
       <Divider />
       <SettingsAction
         updateInfo={messages.updateInfo}
         abort={messages.abort}
         optionalText={messages.optionalText}
-        testFunc={testFunc}
+        toggleOffAllNotifications={toggleOffAllNotifications}
       />
     </Card>
   );
 };
-
+NotificationSettingsCard.propTypes = {
+  data: PropTypes.shape([]).isRequired,
+  handleNotificationChange: PropTypes.func.isRequired,
+  toggleOffAllNotifications: PropTypes.func.isRequired
+};
 export default NotificationSettingsCard;

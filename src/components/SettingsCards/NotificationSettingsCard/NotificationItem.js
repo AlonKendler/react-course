@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 // TODO: do not use props object, use destructuring
 // TODO: learn about prop-types and add them to all of your components
 
-const NotificationItem = ({ title, text }) => {
+const NotificationItem = ({ id, title, text, isOn, handleChange }) => {
   const classes = useStyles();
   return (
     <Grid
@@ -41,7 +41,7 @@ const NotificationItem = ({ title, text }) => {
         </Typography>
       </Grid>
       <Grid item className={classes.switch} xs={1}>
-        <NotificationSwitch />
+        <NotificationSwitch id={id} isOn={isOn} handleChange={handleChange} />
       </Grid>
     </Grid>
   );
@@ -49,7 +49,10 @@ const NotificationItem = ({ title, text }) => {
 
 NotificationItem.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  isOn: PropTypes.bool.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired
 };
 
 export default NotificationItem;

@@ -16,7 +16,12 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(1)
   }
 }));
-const SettingsAction = ({ updateInfo, abort, optionalText, testFunc }) => {
+const SettingsAction = ({
+  updateInfo,
+  abort,
+  optionalText,
+  toggleOffAllNotifications
+}) => {
   const classes = useStyles();
   return (
     <Grid
@@ -26,7 +31,7 @@ const SettingsAction = ({ updateInfo, abort, optionalText, testFunc }) => {
       alignItems="center"
     >
       <Grid item xs={5}>
-        <Button className={classes.icon} onClick={testFunc}>
+        <Button className={classes.icon} onClick={toggleOffAllNotifications}>
           {optionalText}
         </Button>
       </Grid>
@@ -50,12 +55,11 @@ SettingsAction.propTypes = {
   updateInfo: PropTypes.string.isRequired,
   abort: PropTypes.string.isRequired,
   optionalText: PropTypes.string,
-  testFunc: PropTypes.string
+  toggleOffAllNotifications: PropTypes.func.isRequired
 };
 
 SettingsAction.defaultProps = {
-  optionalText: "",
-  testFunc: ""
+  optionalText: ""
 };
 
 export default SettingsAction;
