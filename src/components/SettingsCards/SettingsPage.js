@@ -1,6 +1,6 @@
 import React from "react";
-import NotificationSettingsCard from "./components/SettingsCards/NotificationSettingsCard";
-import PersonalSettingsCard from "./components/SettingsCards/PersonalSettingsCard";
+import NotificationSettingsCard from "./NotificationSettingsCard";
+import PersonalSettingsCard from "./PersonalSettingsCard";
 
 // TODO  (read about container components vs components )
 // TODO: do not use <div> if there is no need
@@ -22,6 +22,9 @@ import PersonalSettingsCard from "./components/SettingsCards/PersonalSettingsCar
 // 4-> when user presses save it saves the data
 
 const SettingsPage = () => {
+  // const handleChange = () => {
+
+  // }
   return (
     <>
       <NotificationSettingsCard />

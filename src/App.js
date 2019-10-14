@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import SettingsPage from "./SettingsPage";
+import SettingsPage from "./components/SettingsCards/SettingsPage";
 
 const App = () => {
   return (

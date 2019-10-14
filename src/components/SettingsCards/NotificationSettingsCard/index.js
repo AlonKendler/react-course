@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const NotificationSettingsCard = () => {
+const NotificationSettingsCard = testFunc => {
   const classes = useStyles();
 
   return (
@@ -29,6 +29,7 @@ const NotificationSettingsCard = () => {
         updateInfo={messages.updateInfo}
         abort={messages.abort}
         optionalText={messages.optionalText}
+        testFunc={testFunc}
       />
     </Card>
   );

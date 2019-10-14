@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Switch from "@material-ui/core/Switch";
 
 export default function NotificationSwitch() {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     checkedB: true
   });
 

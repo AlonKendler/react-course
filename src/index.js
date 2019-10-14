@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { createMuiTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
 import RTL from "./components/RTL";
 
 const theme = createMuiTheme({
