@@ -25,7 +25,7 @@ const NotificationList = ({ data, handleNotificationChange }) => {
 };
 
 NotificationList.propTypes = {
-  data: PropTypes.shape([]).isRequired,
+  data: PropTypes.arrayOf.isRequired,
   handleNotificationChange: PropTypes.func.isRequired
 };
 

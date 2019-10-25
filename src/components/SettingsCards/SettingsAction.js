@@ -55,11 +55,12 @@ SettingsAction.propTypes = {
   updateInfo: PropTypes.string.isRequired,
   abort: PropTypes.string.isRequired,
   optionalText: PropTypes.string,
-  toggleOffAllNotifications: PropTypes.func.isRequired
+  toggleOffAllNotifications: PropTypes.func
 };
 
 SettingsAction.defaultProps = {
-  optionalText: ""
+  optionalText: "",
+  toggleOffAllNotifications: null
 };
 
 export default SettingsAction;

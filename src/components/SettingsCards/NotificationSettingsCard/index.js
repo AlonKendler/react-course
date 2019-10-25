@@ -43,7 +43,7 @@ const NotificationSettingsCard = ({
   );
 };
 NotificationSettingsCard.propTypes = {
-  data: PropTypes.shape([]).isRequired,
+  data: PropTypes.arrayOf.isRequired,
   handleNotificationChange: PropTypes.func.isRequired,
   toggleOffAllNotifications: PropTypes.func.isRequired
 };
