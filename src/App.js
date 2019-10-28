@@ -1,31 +1,13 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import SettingsPage from "./components/SettingsCards/SettingsPage";
+import AppBarTest from "./components/AppBarTest";
 
 const App = () => {
-  //   return (
-  //     <>
-  //       <SettingsPage />
-  //     </>
-  //   );
-  // };
-
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/settings">settingsPage</Link>
-          </li>
-          <li>
-            <Link to="/users">Users</Link>
-          </li>
-        </ul>
-      </nav>
+      <AppBarTest />
 
       {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
@@ -34,11 +16,9 @@ const App = () => {
           <SettingsPage />
         </Route>
         <Route path="/users">
-          <SettingsPage />
+          <h2>text</h2>
         </Route>
-        <Route path="/">
-          <SettingsPage />
-        </Route>
+        <Route path="/" />
       </Switch>
     </div>
   );
